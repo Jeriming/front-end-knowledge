@@ -11,10 +11,11 @@
         mode="horizontal"
         @select="handleSelect"
       >
-        <el-menu-item v-for="menuItem in menuList" :key="menuItem.key">
-          <router-link class="router-style" :to="{ path: menuItem.url }">{{
+        <el-menu-item v-for="menuItem in menuList" :key="menuItem.key" :index="menuItem.url">
+          {{ menuItem.name }}
+          <!-- <router-link class="router-style" :to="{ path: menuItem.url }">{{
             menuItem.name
-          }}</router-link>
+          }}</router-link> -->
         </el-menu-item>
       </el-menu>
     </el-header>
@@ -55,6 +56,7 @@ export default {
   methods: {
     handleSelect(key, keyPath) {
       console.log(key, keyPath);
+      this.$router.push({path: key});
     }
   }
 };
