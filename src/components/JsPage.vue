@@ -7,8 +7,8 @@
       content="JS知识"
     >
     </el-page-header>
-    <template v-for="comItem in componentList">
-      <component :is="comItem" :key="comItem"></component>
+    <template v-for="(comItem, index) in componentList">
+      <component :is="comItem" :key="comItem" :index="index + 1"></component>
     </template>
     <get-more @get-next="onGetNext"></get-more>
   </div>
@@ -17,6 +17,12 @@
 import getMore from './GetMore.vue';
 import { list, firstIndex } from './js/pageList.json';
 import { getNextData } from '../util/util.js';
+let components = {};
+list.forEach(item=>{
+  components[item] = () => import("./js/" + item + ".vue");
+})
+components = Object.assign(components, {"get-more": getMore})
+
 export default {
   data() {
     return {
@@ -24,11 +30,7 @@ export default {
       componentList: [list.splice(firstIndex, 1)[0]],
     };
   },
-  components: {
-    "macrosc-min-task": () => import("./js/macrosc-min-task.vue"),
-    "get-uuid": () =>　import("./js/get-uuid.vue"),
-    "get-more": getMore
-  },
+  components: components,
   methods: {
     goBack() {
       this.$router.back();

@@ -1,8 +1,7 @@
 {
   "list": [
     "macrosc-min-task",
-    "get-uuid",
-    "type-list"
+    "get-uuid"
   ],
   "firstIndex": 1
 }

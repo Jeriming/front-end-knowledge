@@ -1,6 +1,6 @@
 <template>
   <section class="section-container">
-    <h4>2. 获取32位的唯一哈希值</h4>
+    <h4>{{index}}. 获取32位的唯一哈希值</h4>
     <p class="code-show-container">
     代码如下：
     function uuid() {
@@ -29,6 +29,12 @@ function uuid() {
   ))
 }
 export default {
+  props: {
+    index: {
+      type: Number,
+      default: ()=>null
+    }
+  },
   data() {
     return {}
   },

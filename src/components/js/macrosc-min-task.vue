@@ -1,6 +1,6 @@
 <template>
   <section class="section-container">
-    <h4>1. 宏任务微任务</h4>
+    <h4>{{index}}. 宏任务微任务</h4>
     <p class="code-show-container">
     以下代码：打印结果 
   async function runData() {
@@ -68,6 +68,12 @@
 </template>
 <script>
 export default {
+  props: {
+    index: {
+      type: Number,
+      default: ()=>null
+    }
+  },
   data() {
     return {}
   }
