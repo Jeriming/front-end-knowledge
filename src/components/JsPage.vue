@@ -21,22 +21,28 @@ let components = {};
 list.forEach(item=>{
   components[item] = () => import("./js/" + item + ".vue");
 })
+
+let tempList = [].concat(list);
 components = Object.assign(components, {"get-more": getMore})
 
 export default {
   data() {
     return {
       pageKey: "",
-      componentList: [list.splice(firstIndex, 1)[0]],
+      componentList: [],
     };
   },
   components: components,
+  created() {
+    tempList = [].concat(list);
+    this.componentList = [tempList.splice(firstIndex, 1)[0]];
+  },
   methods: {
     goBack() {
       this.$router.back();
     },
     onGetNext() {
-      const data = getNextData(list, firstIndex);
+      const data = getNextData(tempList, firstIndex);
       if(data) {
         this.componentList.push(data);
       }
