@@ -2,7 +2,8 @@
   "list": [
     "macrosc-min-task",
     "get-uuid",
-    "type-list"
+    "type-list",
+    "a.x"
   ],
-  "firstIndex": 1
+  "firstIndex": 0
 }
