@@ -10,26 +10,32 @@
     <template v-for="(comItem, index) in componentList">
       <component :is="comItem" :key="comItem" :index="index + 1"></component>
     </template>
-    <get-more @get-next="onGetNext"></get-more>
+    <get-more
+      :btnText="btnText"
+      :disabled="btnDisabled"
+      @get-next="onGetNext"
+    ></get-more>
   </div>
 </template>
 <script>
-import getMore from './GetMore.vue';
-import { list, firstIndex } from './js/pageList.json';
-import { getNextData } from '../util/util.js';
+import getMore from "./GetMore.vue";
+import { list, firstIndex } from "./js/pageList.json";
+import { getNextData } from "../util/util.js";
 let components = {};
-list.forEach(item=>{
+list.forEach(item => {
   components[item] = () => import("./js/" + item + ".vue");
-})
+});
 
 let tempList = [].concat(list);
-components = Object.assign(components, {"get-more": getMore})
+components = Object.assign(components, { "get-more": getMore });
 
 export default {
   data() {
     return {
       pageKey: "",
       componentList: [],
+      btnText: "Next",
+      btnDisabled: false
     };
   },
   components: components,
@@ -43,8 +49,11 @@ export default {
     },
     onGetNext() {
       const data = getNextData(tempList, firstIndex);
-      if(data) {
+      if (data) {
         this.componentList.push(data);
+      } else {
+        this.btnText = "暂无更多数据";
+        this.btnDisabled = true;
       }
     }
   }

@@ -1,10 +1,21 @@
 <template>
   <div class="get-more-container">
-    <button class="next-botton" @click="onGetNext">下一条</button>
+    <el-button type="primary" :disabled="disabled" @click="onGetNext">{{ btnText }}</el-button>
+    <!-- <button class="next-botton" @click="onGetNext">下一条</button> -->
   </div>
 </template>
 <script>
 export default {
+  props: {
+    btnText: {
+      type: String,
+      default: 'Next'
+    },
+    disabled: {
+      type: Boolean,
+      default: false
+    }
+  },
   data() {
     return {}
   },
