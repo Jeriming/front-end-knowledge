@@ -5,7 +5,7 @@
       class="page-header-style"
       @back="goBack"
       title="返回首页"
-      content="CSS知识"
+      :content="`${titlePre}知识`"
     >
     </el-page-header>
 
@@ -40,7 +40,8 @@ export default {
       firstIndex: 0,
       tempList: [],
       btnText: "Next",
-      btnDisabled: false
+      btnDisabled: false,
+      titlePre: ''
     };
   },
   created() {
@@ -56,18 +57,22 @@ export default {
       switch(key) {
         case 'html-page': {
           path = 'html';
+          this.titlePre = path;
           break;
         }
         case 'css-page': {
           path = 'css';
+          this.titlePre = path;
           break;
         }
         case 'js-page': {
           path = 'js';
+          this.titlePre = path;
           break;
         }
         case 'webpack-page': {
           path = 'webpack';
+          this.titlePre = path;
           break;
         }
       }
