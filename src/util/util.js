@@ -8,7 +8,7 @@ export function getNextData(arr, currentIndex) {
 
 export function writeConfigToHtml(text) {
   const dom = document.createElement("script");
-  dom.setAttribute("type", "text/javascript");
+  dom.setAttribute("type", "application/json");
   dom.setAttribute("id", "pageConfig");
   dom.text = JSON.stringify(text);
   document.head.appendChild(dom);
