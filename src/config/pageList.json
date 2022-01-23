@@ -26,5 +26,11 @@
       "config-scss"
     ],
     "firstIndex": 0
+  },
+  "ammo": {
+    "list": [
+      "ammo"
+    ],
+    "firstIndex": 0
   }
 }

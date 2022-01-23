@@ -49,6 +49,11 @@ export default {
           url: "/webpack-page",
           name: "webpack知识",
           key: "webpack-page"
+        },
+        {
+          url: "/ammo-page",
+          name: "Ammo引擎",
+          key: "ammo-page"
         }
       ]
     };

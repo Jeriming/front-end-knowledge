@@ -28,6 +28,7 @@ let components = { getMore };
 for(let path in pageList) {
   let {list} = pageList[path];
   list.forEach(item=>{
+    const temp = `./${path}/${item}.vue`;
     components[item] = () => import(`./${path}/${item}.vue`);
   })
 }
@@ -72,6 +73,11 @@ export default {
         }
         case 'webpack-page': {
           path = 'webpack';
+          this.titlePre = path;
+          break;
+        }
+        case 'ammo-page': {
+          path = 'ammo';
           this.titlePre = path;
           break;
         }
