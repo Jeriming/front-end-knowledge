@@ -33,6 +33,8 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 
 - 工程创建，动态组建拆分 [2021-04-19](https://github.com/Jeriming/front-end-knowledge/commit/c15ecc25e0f7da493abbc452dab3f0c7d0abce54)
 
+- 新增Ammo物理引擎文档 [2022-01-23](https://jeriming.github.io/front-end-knowledge/#/ammo-page)
+
 ## 预览
 
 本工程预览地址：[docs for project](https://jeriming.github.io/front-end-knowledge/#/)
