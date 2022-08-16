@@ -4,6 +4,9 @@ export default class Logger {
   }
 
   _initInstance(key) {
+    if(!document.body) {
+      throw new EvalError("Please take this script on document body!")
+    }
     let dom = document.getElementById(key);
     if (!dom) {
       dom = document.createElement("pre");
@@ -20,7 +23,7 @@ export default class Logger {
   print() {
     if (!this._instance) throw new TypeError("No't init Dom Instance");
     for (let i = 0; i < arguments.length; i++) {
-      this._instance.innerHTML += " " + arguments[i];
+      this._instance.innerHTML += " " + (typeof arguments[i] === 'object' ? JSON.stringify(arguments[i]) : arguments[i]);
     }
     this._instance.innerHTML += '\n';
     this._scrollToBottom(window, document.body.scrollHeight)
