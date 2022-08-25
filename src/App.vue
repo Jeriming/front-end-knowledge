@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <HeaderBar></HeaderBar>
     <router-view />
     <span v-if="showBackTop" @click="onBackTop" class="back-to-top">
       <i class="el-icon-caret-top"></i>
@@ -10,8 +11,12 @@
 
 <script>
 import { writeConfigToHtml } from './util/util.js';
+import HeaderBar from './components/HeaderBar.vue'
 export default {
   name: "App",
+  components: {
+    HeaderBar
+  },
   data() {
     return {
       showBackTop: false
@@ -46,11 +51,8 @@ export default {
   }
 };
 </script>
-<style>
-html,
-body {
-  margin: 0;
-}
+<style lang="scss">
+@import url(./css/global.scss);
 </style>
 <style scoped>
 .back-to-top {

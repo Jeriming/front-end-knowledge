@@ -1,0 +1,35 @@
+:root {
+  --background-color: #ffffff;
+  --item-hover-background: rgb(200, 200, 200);
+  --font-color: #1e1e1e;
+}
+.dark {
+  --background-color: #1e1e1e;
+  --item-hover-background: rgb(39, 38, 38);
+  --font-color: #ffffff;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  color: var(--font-color);
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.el-menu, .el-menu-item {
+  background-color: var(--background-color) !important;
+  color: var(--font-color) !important;
+}
+.el-menu-item:hover {
+ background-color: var(--item-hover-background) !important;
+}
+
+.el-switch__core:after {
+  background-color: var(--background-color) !important;
+}

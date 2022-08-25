@@ -25,7 +25,7 @@ export default class Logger {
     for (let i = 0; i < arguments.length; i++) {
       this._instance.innerHTML += " " + (typeof arguments[i] === 'object' ? JSON.stringify(arguments[i]) : arguments[i]);
     }
-    this._instance.innerHTML += '\n';
+    this._instance.innerHTML += '<br>';
     this._scrollToBottom(window, document.body.scrollHeight)
   }
 

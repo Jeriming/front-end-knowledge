@@ -1,6 +1,5 @@
 <template>
   <el-container>
-    <el-header><h1>前端知识大全</h1></el-header>
     <el-header>
       <el-menu
         :default-active="activeIndex"

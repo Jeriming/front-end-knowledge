@@ -13,3 +13,12 @@ export function writeConfigToHtml(text) {
   dom.text = JSON.stringify(text);
   document.head.appendChild(dom);
 }
+
+export function switchColorTheme(flag) {
+  if(flag) {
+    document.documentElement.classList.add('dark');
+  }
+  else {
+    document.documentElement.classList.remove('dark');
+  }
+}
