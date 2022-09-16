@@ -38,11 +38,10 @@ export default {
   margin-bottom: 30px;
   .code-show-container {
     white-space: pre;
-    background-color: #f2f2f2;
+    background-color: var(--background-grey-color);
   }
   .words-show-container {
     white-space: pre;
-    background-color: #ffffff;
   }
 }
 </style>

@@ -2,11 +2,13 @@
   --background-color: #ffffff;
   --item-hover-background: rgb(200, 200, 200);
   --font-color: #1e1e1e;
+  --background-grey-color: #f2f2f2;
 }
 .dark {
   --background-color: #1e1e1e;
   --item-hover-background: rgb(39, 38, 38);
   --font-color: #ffffff;
+  --background-grey-color: #444343;
 }
 
 html,
@@ -32,4 +34,13 @@ h1 {
 
 .el-switch__core:after {
   background-color: var(--background-color) !important;
+}
+
+.dark {
+  & img {
+    filter: grayscale(1) invert(1);
+  }
+}
+.section-container .words-show-container {
+  background-color: var(--background-color);
 }
