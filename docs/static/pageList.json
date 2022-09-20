@@ -1,0 +1,36 @@
+{
+  "css": {
+    "list": [
+      "box-model",
+      "scss-info"
+    ],
+    "firstIndex": 0
+  },
+  "html": {
+    "list": [
+      "render-process"
+    ],
+    "firstIndex": 0
+  },
+  "js": {
+    "list": [
+      "macrosc-min-task",
+      "get-uuid",
+      "type-list",
+      "a.x"
+    ],
+    "firstIndex": 0
+  },
+  "webpack": {
+    "list": [
+      "config-scss"
+    ],
+    "firstIndex": 0
+  },
+  "ammo": {
+    "list": [
+      "ammo"
+    ],
+    "firstIndex": 0
+  }
+}
