@@ -11,7 +11,7 @@
         <div class="content">
           <div class="switch">
             <el-switch
-              v-model="theme"
+              v-model="darkTheme"
               class="ml-2"
               @change="onChangeTheme"
               style="
@@ -28,25 +28,21 @@
         </div>
       </div>
     </el-header>
+    <el-scrollbar class="personal-side-scrollbar">
+      <el-aside class="personal-side"></el-aside>
+    </el-scrollbar>
   </el-container>
   <router-view />
 </template>
 <script>
-import { useDark, useToggle } from "@vueuse/core";
+import App from './App';
 import 'element-plus/theme-chalk/dark/css-vars.css'
-const isDark = useDark();
-const toggleDark = useToggle(isDark);
 export default {
-  data() {
-    return {
-      theme: false,
-    };
-  },
-  methods: {
-    onChangeTheme() {
-      toggleDark();
-    },
-  },
+  setup(props) {
+    const API = App(props);
+
+    return API;
+  }
 };
 </script>
 <style lang="scss" scoped>
@@ -54,6 +50,7 @@ export default {
   .personal-nav {
     position: sticky;
     width: 100%;
+    border-bottom: 1px solid var(--border-color);
     padding: var(--common-padding);
     position: relative;
     background-image: radial-gradient(transparent 1px, var(--bg-color) 1px);
