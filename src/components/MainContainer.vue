@@ -16,7 +16,6 @@ export default {
   },
   methods: {
     initData() {
-      console.log(article)
       let template = ejs.render(article, {
         user: {
           name: 'jeriming'

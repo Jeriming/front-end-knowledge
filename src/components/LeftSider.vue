@@ -13,10 +13,11 @@ export default {
   },
   methods: {
     initData() {
-      for(let i = 0; i < 100; i++) {
+      for(let i = 0; i < $localRouters.length; i++) {
+        const router = $localRouters[i];
         this.menus.push({
           key: i,
-          label: `sider${i}`
+          label: `${router.name}`
         })
       }
     }

@@ -1,3 +1,5 @@
+const Routers = require("./build/GenRouter");
+
 module.exports = {
   chainWebpack: (config) => {
     const oneOfsMap = config.module.rule("scss").oneOfs.store;
@@ -12,9 +14,14 @@ module.exports = {
         .end();
     });
 
-    config.plugin('html').tap(options => {
-      options[0].title = '个人主页';
+    config.plugin("html").tap((options) => {
+      options[0].title = "个人主页";
       return options;
-    })
+    });
+
+    config.plugin("define").tap((options) => {
+      options[0]["$localRouters"] = JSON.stringify(Routers);
+      return options;
+    });
   },
 };
