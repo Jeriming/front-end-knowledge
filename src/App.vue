@@ -28,21 +28,37 @@
         </div>
       </div>
     </el-header>
-    <el-scrollbar class="personal-side-scrollbar">
-      <el-aside class="personal-side"></el-aside>
-    </el-scrollbar>
+    <el-container class="personal-container">
+      <el-aside class="personal-side">
+        <el-scrollbar class="personal-side-scrollbar">
+          <left-sider></left-sider>
+        </el-scrollbar>
+      </el-aside>
+      <el-main class="personal-main">
+        <el-scrollbar class="personal-side-scrollbar">
+          <main-container></main-container>
+        </el-scrollbar>
+      </el-main>
+    </el-container>
   </el-container>
-  <router-view />
+  <!-- <router-view /> -->
 </template>
 <script>
-import App from './App';
-import 'element-plus/theme-chalk/dark/css-vars.css'
+import App from "./App";
+import LeftSider from "@/components/LeftSider.vue";
+import MainContainer from "@/components/MainContainer.vue";
+import "element-plus/theme-chalk/dark/css-vars.css";
 export default {
+  components: {
+    LeftSider,
+    MainContainer,
+    MainContainer,
+  },
   setup(props) {
     const API = App(props);
 
     return API;
-  }
+  },
 };
 </script>
 <style lang="scss" scoped>
@@ -50,6 +66,7 @@ export default {
   .personal-nav {
     position: sticky;
     width: 100%;
+    height: var(--header-height);
     border-bottom: 1px solid var(--border-color);
     padding: var(--common-padding);
     position: relative;
@@ -64,7 +81,6 @@ export default {
       .logo-container {
         display: flex;
         align-items: center;
-        height: var(--header-height);
         .logo {
           display: flex;
           align-items: center;
@@ -94,6 +110,18 @@ export default {
             height: 20px;
           }
         }
+      }
+    }
+  }
+  .personal-container {
+    position: relative;
+    height: calc(100vh - var(--header-height));
+    .personal-side,
+    .personal-main {
+      padding: 0;
+      height: 100%;
+      .personal-scrollbar {
+        max-height: 100%;
       }
     }
   }

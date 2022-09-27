@@ -11,5 +11,10 @@ module.exports = {
         })
         .end();
     });
+
+    config.plugin('html').tap(options => {
+      options[0].title = '个人主页';
+      return options;
+    })
   },
 };
