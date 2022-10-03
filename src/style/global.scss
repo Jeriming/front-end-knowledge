@@ -4,4 +4,9 @@
   --header-height: 55px;
   --border-color: #dcdfe6;
   --border-color-light: #e4e7ed;
+  --color-canvas-subtle: #f6f8fa;
+  --code-bg-color: var(--el-fill-color-light);
+  --brand-color: var(--el-color-primary);
+  --brand-color-light: var(--el-color-primary-light-1);
+  --link-active-bg-color: rgba(var(--el-color-primary-rgb), .1);
 }

@@ -117,6 +117,9 @@ export default {
   .personal-container {
     position: relative;
     height: calc(100vh - var(--header-height));
+    .personal-side {
+      border-right: 1px solid var(--border-color);
+    }
     .personal-side,
     .personal-main {
       padding: 0;
