@@ -41,7 +41,6 @@
       </el-main>
     </el-container>
   </el-container>
-  <!-- <router-view /> -->
 </template>
 <script>
 import App from "./App";

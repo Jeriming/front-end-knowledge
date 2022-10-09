@@ -1,5 +1,5 @@
 <script>
-import article from '!!raw-loader!../template/宏任务.html';
+import article from '!!raw-loader!../../template/宏任务.html';
 import ejs from 'ejs';
 import { h } from 'vue';
 

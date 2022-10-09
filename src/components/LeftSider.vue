@@ -13,40 +13,47 @@
 </template>
 <script>
 import routers from "@/router/router.js";
+import { ref, reactive, watch, onMounted } from 'vue';
+import { useRouter, useRoute } from 'vue-router'
 
+/**
+ * setup 只能hook onBeforeMount,onMounted,onBeforeUpdate,onUpdated,onBeforeUnmount,onUnmounted,onErrorCaptured,onRenderTracked,onRenderTriggered
+ */
 export default {
-  data() {
-    return {
-      menus: [],
-      active: "",
-    };
-  },
-  created() {
-    this.initData();
-  },
-  watch: {
-    $route(router) {
-      this.setDefault(router);
+  setup() {
+    const menus = reactive([]);
+    const active = ref('');
+    const router = useRouter();
+
+    // 监听路由
+    const currentRoute = reactive(useRoute());
+    watch(currentRoute, (r)=> {
+      if(active.value !== r.name) {
+        active.value = r.name;
+      }
+    })
+
+    const onClick = (item) => {
+      active.value = item.key;
+      router.push({ path: item.path });
     }
-  },
-  methods: {
-    initData() {
+
+    onMounted(()=>{
       for (let i = 0; i < routers.length; i++) {
-        const router = routers[i];
-        this.menus.push({
-          key: router.name,
-          label: `${router.label}`,
-          path: router.path,
+        const r = routers[i];
+        menus.push({
+          key: r.name,
+          label: `${r.label}`,
+          path: r.path,
         });
       }
-    },
-    setDefault(router) {
-      this.active = router.name;
-    },
-    onClick(item) {
-      this.active = item.key;
-      this.$router.push({ path: item.path });
-    },
+    })
+
+    return {
+      menus,
+      active,
+      onClick
+    }
   },
 };
 </script>

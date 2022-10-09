@@ -1,7 +1,8 @@
 const Routers = require("./build/GenRouter");
 
 module.exports = {
-  assetsDir: 'front-end-knowledge',
+  productionSourceMap: false,
+  assetsDir: "front-end-knowledge",
   chainWebpack: (config) => {
     const oneOfsMap = config.module.rule("scss").oneOfs.store;
     oneOfsMap.forEach((item) => {

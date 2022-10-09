@@ -11,7 +11,7 @@ const routers = [
     path: "/marco",
     name: "Marco",
     label: "宏任务",
-    component: () => import("../views/Marco.vue"),
+    component: () => import("../views/Marco/Marco.vue"),
   },
   {
     path: "/about",
