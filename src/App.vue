@@ -55,7 +55,6 @@ export default {
     MainContainer,
   },
   setup(props) {
-    console.log("insert routers", $localRouters);
     const API = App(props);
 
     return API;
