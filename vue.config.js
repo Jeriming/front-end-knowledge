@@ -37,10 +37,18 @@ module.exports = {
     //   ],
     // ]);
 
-    const copyArgs = config.plugin("copy").store.get("args")[0];
-    copyArgs.push({
-      from: "./src/md/",
-      to: `./${assetsDir}/md/`,
+    // const copyArgs = config.plugin("copy").store.get("args")[0];
+    // copyArgs.push({
+    //   from: "./src/md/",
+    //   to: `./${assetsDir}/md/`,
+    // });
+
+    config.plugin("copy").tap((args) => {
+      args[0].push({
+        from: "./src/md/",
+        to: `./${assetsDir}/md/`,
+      });
+      return args;
     });
   },
 };
