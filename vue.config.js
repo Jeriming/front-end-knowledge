@@ -1,8 +1,9 @@
 const Routers = require("./build/GenRouter");
+const assetsDir = "front-end-knowledge";
 
 module.exports = {
   productionSourceMap: false,
-  assetsDir: "front-end-knowledge",
+  assetsDir: assetsDir,
   chainWebpack: (config) => {
     const oneOfsMap = config.module.rule("scss").oneOfs.store;
     oneOfsMap.forEach((item) => {
@@ -24,6 +25,22 @@ module.exports = {
     config.plugin("define").tap((options) => {
       options[0]["$localRouters"] = JSON.stringify(Routers);
       return options;
+    });
+
+    // 这样修改会直接覆盖之前的配置
+    // config.plugin("copy").use(require("copy-webpack-plugin"), [
+    //   [
+    //     {
+    //       from: './src/md/',
+    //       to: `./${assetsDir}/md/`,
+    //     },
+    //   ],
+    // ]);
+
+    const copyArgs = config.plugin("copy").store.get("args")[0];
+    copyArgs.push({
+      from: "./src/md/",
+      to: `./${assetsDir}/md/`,
     });
   },
 };
