@@ -8,10 +8,34 @@ const routers = [
     component: DyncRender,
   },
   {
-    path: "/marco",
-    name: "marco",
-    label: "宏任务",
+    path: "/js",
+    name: "js",
+    label: "Javascript",
     component: DyncRender,
+    children: [{
+      path: '/marco',
+      name: "marco",
+      label: "宏任务",
+      component: DyncRender,
+    },
+    {
+      path: '/js-other',
+      name: "jsOther",
+      label: "零碎知识点",
+      component: DyncRender,
+    }]
+  },
+  {
+    path: "/css",
+    name: "css",
+    label: "css",
+    component: DyncRender,
+    children: [{
+      path: '/bfc',
+      name: "bfc",
+      label: "BFC",
+      component: DyncRender,
+    }]
   },
   {
     path: "/about",

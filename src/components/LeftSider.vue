@@ -6,7 +6,7 @@
         :class="{ active: item.key === active }"
         @click.prevent="onClick(item)"
       >
-        <p>{{ item.label }}</p>
+        <p :class="getClassName(item.level)">{{ item.label }}</p>
       </a>
     </template>
   </div>
@@ -38,21 +38,34 @@ export default {
       router.push({ path: item.path });
     }
 
-    onMounted(()=>{
-      for (let i = 0; i < routers.length; i++) {
-        const r = routers[i];
+    function appendRouterToMenus(rr, level) {
+      for (let i = 0; i < rr.length; i++) {
+        const r = rr[i];
         menus.push({
           key: r.name,
           label: `${r.label}`,
           path: r.path,
+          level
         });
+        if(r.children && r.children.length > 0) {
+          appendRouterToMenus(r.children, level + 1);
+        }
       }
+    }
+
+    onMounted(()=>{
+      appendRouterToMenus(routers, 0);
     })
+
+    function getClassName(level) {
+      return `level-${level}`;
+    }
 
     return {
       menus,
       active,
-      onClick
+      onClick,
+      getClassName
     }
   },
 };
@@ -70,6 +83,15 @@ export default {
   .active {
     background-color: var(--link-active-bg-color);
     color: var(--brand-color);
+  }
+
+  .level {
+    &-1 {
+      margin-left: 10px;
+    }
+    &-2 {
+      margin-left: 20px;
+    }
   }
 }
 </style>

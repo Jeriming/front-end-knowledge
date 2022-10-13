@@ -27,11 +27,15 @@ npm run build
 
 ## 版本节点时间轴
 
-- webpack 读取文件名称，并向前端传递变量 待完成
+- 将文件目录转化成路由，待完成
 
-- 工程使用 ejs 发布文章 **2022-09-27**
+- webpack 使用axios获取文章内容  [2022-10-13](https://github.com/Jeriming/front-end-knowledge/commit/94beeea9d4f3b15596b95e7b36961a1f5183ad01)
+
+- 工程使用 ejs 发布文章 [2022-09-27](https://github.com/Jeriming/front-end-knowledge/commit/bb23244d38d498501a38a0ff274fcdee50572da8)
 
 - 升级 vue 3.x [2022-09-20](https://github.com/Jeriming/front-end-knowledge/commit/c5567c3a811bbea9a3fb04e336e9fd10c58829c0)
+
+- 加入深色模式 [2022-08-25](https://github.com/Jeriming/front-end-knowledge/commit/f4217133be79e2d0dcfec0f3318839c789f0b979)
 
 - 新增 Ammo 物理引擎文档 [2022-01-23](https://jeriming.github.io/front-end-knowledge/#/ammo-page)
 

@@ -4,11 +4,11 @@
 
 ## Javascript篇
 
-详见：[Javascript](./src/js/js.md)
+详见：[Javascript](/#/js/)
 
 ## CSS篇
 
-详见：[CSS](./src/css/css.md)
+详见：[CSS](/#/css/)
 
 ## Webpack篇
 
