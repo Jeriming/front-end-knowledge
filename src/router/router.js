@@ -1,23 +1,23 @@
-import Home from "../views/Home.vue";
+import DyncRender from '../components/DyncRender.vue';
 
 const routers = [
   {
     path: "/",
-    name: "Home",
+    name: "home",
     label: "首页",
-    component: Home,
+    component: DyncRender,
   },
   {
     path: "/marco",
-    name: "Marco",
+    name: "marco",
     label: "宏任务",
-    component: () => import("../views/Marco/Marco.vue"),
+    component: DyncRender,
   },
   {
     path: "/about",
-    name: "About",
+    name: "about",
     label: "关于",
-    component: () => import("../views/About.vue"),
+    component: DyncRender,
   },
 ];
 
