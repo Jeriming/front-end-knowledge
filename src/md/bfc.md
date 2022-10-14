@@ -1,4 +1,4 @@
-[返回](/#/css/)
+[返回](./#/css/)
 
 ## BFC
 
@@ -89,4 +89,4 @@ p 的上下边距都是 100px，结果 p1 和 p2 间距只有 100px，很明显�
 - GFC（GrideLayout formatting contexts）：网格布局格式化上下文。当为一个元素设置 display 值为 grid 的时候，此元素将会获得一个独立的渲染区域。
 - FFC（Flex formatting contexts）：自适应格式上下文。display 值为 flex 或者 inline-flex 的元素将会生成自适应容器。
 
-[返回](/#/css/)
+[返回](./#/css/)

@@ -1,4 +1,4 @@
-[返回](/#/js/)
+[返回](./#/js/)
 
 ## 1. 为什么使用 void 0 代替 undefined
 
@@ -313,4 +313,4 @@ Object.is(+0, -0);                // false
 Object.is(NaN, 0/0);              // true
 Object.is(NaN, Number.NaN)        // true
 
-[返回](/#/js/)
+[返回](./#/js/)
