@@ -6,7 +6,7 @@
 
 ## 2. 箭头函数及 this 指向
 
-记录比较零散但常用的一些知识点，详见：[箭头函数](./arrow-function.md)
+记录比较零散但常用的一些知识点，详见：[箭头函数](./#/arrow-function)
 
 ## 3. call apply bind
 

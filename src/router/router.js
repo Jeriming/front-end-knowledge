@@ -23,6 +23,12 @@ const routers = [
       name: "jsOther",
       label: "零碎知识点",
       component: DyncRender,
+    },
+    {
+      path: '/arrow-function',
+      name: "arrow-function",
+      label: "箭头函数",
+      component: DyncRender,
     }]
   },
   {
