@@ -48,23 +48,23 @@ num1: 117,
 };\
 let res = obj;
 
-![image](./images/stack_heap001.jpg)\
+![image](./front-end-knowledge/md/images/stack_heap001.jpg)\
 obj 和 res 都在栈区，并指向了堆区的 num1: 117
 
 obj.child = obj = { num2: 935 };\
 这段的重点是：**声明从左至右，赋值从右至左**
 
 流程依次为：首先相当于声明了：obj.child\
-![image](./images/stack_heap002.jpg)\
+![image](./front-end-knowledge/md/images/stack_heap002.jpg)\
 相当于在堆区的{num1: 117}增加了一个 undefined 的 child
 
 然后赋值：obj = { num2: 935 }\
-![image](./images/stack_heap003.jpg)\
+![image](./front-end-knowledge/md/images/stack_heap003.jpg)\
 将 obj 指向了堆区的新对象： num2: 935
 
 最后： obj.child = obj，特别注意的是：obj.child = obj = { num2: 935 }; 不等于： obj = { num2: 935 }; obj.child = obj;\
 记住之前的一句话“先声明，后赋值”，此时 obj.child 还是在 num1 中的 child，所以此时示意图应为：\
-![image](./images/stack_heap004.jpg)\
+![image](./front-end-knowledge/md/images/stack_heap004.jpg)\
 该行代码执行完成后：obj 指向了{num2: 935}，而 res 指向的是{num1: 117, child: {num2: 935 }}
 
 所以： obj.child 为 undefinded;res.num1 为 117;var x = y = res.child.num2;即：x,y 都是 935

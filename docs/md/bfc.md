@@ -40,7 +40,7 @@ BFC 可以清除浮动\
 
 将浮动的图片父级设置 overflow: hidden; 即也清除了浮动：
 
-![clear-float.jpg](./images/bfc-clear-float.jpg)
+![clear-float.jpg](./front-end-knowledge/md/images/bfc-clear-float.jpg)
 
 这里需要注意：BFC 都可以清除浮动，为什么一般使用 overflow: hindden; ？\
 我们先看其他几种创建 BFC 的方式：
@@ -68,7 +68,7 @@ BFC 可以解决 **`外边距的重叠 `** 问题，上代码：
 ```
 
 效果如图：\
-![bfc-border.jpg](./images/bfc-border.jpg)
+![bfc-border.jpg](./front-end-knowledge/md/images/bfc-border.jpg)
 
 p 的上下边距都是 100px，结果 p1 和 p2 间距只有 100px，很明显两者发生了边距重叠，想要消除，给各自父级创建 BFC
 
@@ -80,7 +80,7 @@ p 的上下边距都是 100px，结果 p1 和 p2 间距只有 100px，很明显�
 </style>
 ```
 效果如图：\
-![bfc-border.jpg](./images/bfc-border-2.jpg)
+![bfc-border.jpg](./front-end-knowledge/md/images/bfc-border-2.jpg)
 
 除了 BFC 还有其他几个概念：
 

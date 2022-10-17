@@ -33,7 +33,7 @@
 ```
 
 运行结果：
-![image.png](./images/child-test001.png)
+![image.png](./front-end-knowledge/md/images/child-test001.png)
 
 结论：先匹配同层级伪类，然后再是目标标签，比如 p:last-child，先匹配该 p 的同层级的最后一个元素，然后再匹配 p,如果 p 不是该层级的最后一个元素，则未命中
 
