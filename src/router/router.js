@@ -76,9 +76,33 @@ const routers = [
     component: DyncRender,
     children: [
       {
+        path: "/css-other",
+        name: "css-other",
+        label: "零碎知识点",
+        component: DyncRender,
+      },
+      {
+        path: "/pseudo-class",
+        name: "pseudo-class",
+        label: "伪类",
+        component: DyncRender,
+      },
+      {
+        path: "/css-float",
+        name: "css-float",
+        label: "float",
+        component: DyncRender,
+      },
+      {
         path: "/bfc",
         name: "bfc",
         label: "BFC",
+        component: DyncRender,
+      },
+      {
+        path: "/style-priority",
+        name: "style-priority",
+        label: "样式优先级",
         component: DyncRender,
       },
     ],
