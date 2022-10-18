@@ -21,7 +21,7 @@ HTML 默认按照 流 在页面上进行排列布局，流式布局是指利用�
 </div>
 ```
 
-![no-float.png](./front-end-knowledge/md/images/no-float.png)
+![no-float.png](./md/images/no-float.png)
 
 图片文字独占一行，当使图片左浮动时：
 
@@ -41,7 +41,7 @@ HTML 默认按照 流 在页面上进行排列布局，流式布局是指利用�
 </div>
 ```
 
-![no-float.png](./front-end-knowledge/md/images/float-left.png)
+![no-float.png](./md/images/float-left.png)
 
 float 实现文字环绕的原理是：
 
@@ -69,7 +69,7 @@ float 实现文字环绕的原理是：
 </p>
 ```
 
-![no-float.png](./front-end-knowledge/md/images/out-float.png)
+![no-float.png](./md/images/out-float.png)
 
 解决这个问题，可以在使用 float 元素的父级使用 clear 清除浮动：
 
@@ -97,7 +97,7 @@ float 实现文字环绕的原理是：
 </p>
 ```
 
-![no-float.png](./front-end-knowledge/md/images/clear-float.png)
+![no-float.png](./md/images/clear-float.png)
 
 **`注意`** : clear  属性只有块级元素才有效，而::after 等伪元素默认都是内联水平，所以需要设置 display 为 block,并且需要配置 content 否则该元素为空同样不生效。
 
