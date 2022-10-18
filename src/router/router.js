@@ -105,6 +105,12 @@ const routers = [
         label: "样式优先级",
         component: DyncRender,
       },
+      {
+        path: "/dom-width",
+        name: "domWidth",
+        label: "dom宽的区别",
+        component: DyncRender,
+      },
     ],
   },
   {
