@@ -114,6 +114,20 @@ const routers = [
     ],
   },
   {
+    path: "/algorithm",
+    name: "algorithm",
+    label: "算法",
+    component: DyncRender,
+    children: [
+      {
+        path: "/algorithm-hash",
+        name: "algorithm-hash",
+        label: "哈希",
+        component: DyncRender,
+      }
+    ]
+  },
+  {
     path: "/about",
     name: "about",
     label: "关于",
