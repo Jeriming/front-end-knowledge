@@ -1,6 +1,6 @@
 # front-end-knowledge
 
-## Project setup
+## Project setup update
 
 ```
 npm install
