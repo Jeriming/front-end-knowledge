@@ -124,7 +124,13 @@ const routers = [
         name: "algorithm-hash",
         label: "哈希",
         component: DyncRender,
-      }
+      },
+      {
+        path: "/binary-tree",
+        name: "binary-tree",
+        label: "二叉树",
+        component: DyncRender,
+      },
     ]
   },
   {
