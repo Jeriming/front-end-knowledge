@@ -134,6 +134,20 @@ const routers = [
     ]
   },
   {
+    path: "/source-parsing",
+    name: "source-parsing",
+    label: "源码解析",
+    component: DyncRender,
+    children: [
+      {
+        path: "/ele-scroll-bar",
+        name: "ele-scroll-bar",
+        label: "scroll-bar源码解析",
+        component: DyncRender,
+      },
+    ]
+  },
+  {
     path: "/about",
     name: "about",
     label: "关于",
