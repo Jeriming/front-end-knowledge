@@ -131,6 +131,12 @@ const routers = [
         label: "二叉树",
         component: DyncRender,
       },
+      {
+        path: "/algorithm-dynamic",
+        name: "algorithm-dynamic",
+        label: "动态规划",
+        component: DyncRender,
+      },
     ]
   },
   {
