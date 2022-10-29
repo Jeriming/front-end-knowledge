@@ -154,6 +154,20 @@ const routers = [
     ]
   },
   {
+    path: "/webpack",
+    name: "webpack",
+    label: "webpack",
+    component: DyncRender,
+    children: [
+      {
+        path: "/sass-resources-loader",
+        name: "sass-resources-loader",
+        label: "sass-resources-loader",
+        component: DyncRender,
+      },
+    ]
+  },
+  {
     path: "/about",
     name: "about",
     label: "关于",
