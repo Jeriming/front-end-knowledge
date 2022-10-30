@@ -162,7 +162,13 @@ const routers = [
       {
         path: "/sass-resources-loader",
         name: "sass-resources-loader",
-        label: "sass-resources-loader",
+        label: "vue.config 一些配置",
+        component: DyncRender,
+      },
+      {
+        path: "/webpack-debug",
+        name: "webpack-debug",
+        label: "调试 vue-cli",
         component: DyncRender,
       },
     ]
