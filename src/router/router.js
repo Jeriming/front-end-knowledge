@@ -137,6 +137,12 @@ const routers = [
         label: "动态规划",
         component: DyncRender,
       },
+      {
+        path: "/algorithm-pointer",
+        name: "algorithm-pointer",
+        label: "指针",
+        component: DyncRender,
+      },
     ]
   },
   {

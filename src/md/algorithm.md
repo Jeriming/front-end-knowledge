@@ -8,6 +8,6 @@
 
 ## 3. [动态规划](./#/algorithm-dynamic)
 
-## 4. [指针](./#/pointer)
+## 4. [指针](./#/algorithm-pointer)
 
 [返回](./#/)
