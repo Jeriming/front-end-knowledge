@@ -180,6 +180,20 @@ const routers = [
     ]
   },
   {
+    path: "/other",
+    name: "other",
+    label: "其他",
+    component: DyncRender,
+    children: [
+      {
+        path: "/other-cdn",
+        name: "other-cdn",
+        label: "CDN原理",
+        component: DyncRender,
+      },
+    ]
+  },
+  {
     path: "/about",
     name: "about",
     label: "关于",
