@@ -191,6 +191,12 @@ const routers = [
         label: "CDN原理",
         component: DyncRender,
       },
+      {
+        path: "/other-http-cache",
+        name: "other-http-cache",
+        label: "浏览器的缓存机制",
+        component: DyncRender,
+      },
     ]
   },
   {
