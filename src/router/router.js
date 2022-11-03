@@ -197,6 +197,12 @@ const routers = [
         label: "浏览器的缓存机制",
         component: DyncRender,
       },
+      {
+        path: "/other-xss-csrf",
+        name: "other-xss-csrf",
+        label: "XSS攻击和CSRF攻击",
+        component: DyncRender,
+      },
     ]
   },
   {
