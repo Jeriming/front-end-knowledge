@@ -206,6 +206,20 @@ const routers = [
     ]
   },
   {
+    path: "/vue",
+    name: "vue",
+    label: "vue",
+    component: DyncRender,
+    children: [
+      {
+        path: "/vue-dynamicParam",
+        name: "vue-dynamicParam",
+        label: "动态组件及动态参数",
+        component: DyncRender,
+      },
+    ]
+  },
+  {
     path: "/about",
     name: "about",
     label: "关于",
