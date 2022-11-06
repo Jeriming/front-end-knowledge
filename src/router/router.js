@@ -220,6 +220,20 @@ const routers = [
     ]
   },
   {
+    path: "/webgl",
+    name: "webgl",
+    label: "webgl",
+    component: DyncRender,
+    children: [
+      {
+        path: "/webgl-lesson1",
+        name: "webgl-lesson1",
+        label: "Lesson1 绘制一个点",
+        component: DyncRender,
+      },
+    ]
+  },
+  {
     path: "/about",
     name: "about",
     label: "关于",
