@@ -38,6 +38,6 @@ export function main() {
 - 片元着色器（Fragment shader）：进行着片元处理过程（如光照）的程序。片元（fragment）是 webGL 术语，可以理解成像素（图像的单元）。
 
 下图是WebGL系统使用着色器在浏览器上绘制图形的过程：
-![lesson01](./images/lesson01-001.jpg)
+![lesson01](./md/images/lesson01-001.jpg)
 
 [返回](./#/webgl/)

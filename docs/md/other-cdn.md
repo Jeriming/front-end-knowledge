@@ -11,7 +11,7 @@
 7. 服务器将用户请求内容返回给浏览器。
 
 如图：
-![image](./images/no_cdn.jpg)
+![image](./md/images/no_cdn.jpg)
 
 1. CDN 就是内容分发网络的意思，其英文全称为 Content Delivery Network。简单地说，CDN 可以提前把数据存在离用户最近的数据节点，从而避免长途跋涉经过长途骨干网，最终达到减少骨干网负担、提高访问速度的目的。其流程如下：
 
@@ -24,6 +24,6 @@
 8. 用户向 CDN 缓存服务器发起请求，缓存服务器响应用户请求，最终将用户所需要偶的内容返回给浏览器。
 
 如图：
-![image](./images/cdn.jpg)
+![image](./md/images/cdn.jpg)
 
 [返回](./#/other/)

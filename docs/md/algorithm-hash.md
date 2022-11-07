@@ -128,7 +128,7 @@ step 3：遍历数组对分开的数组单独作异或连算。\
 step 4：最后整理次序输出。
 
 如图：
-![image](./images/C30EF4D55F5E47F5616DFDCA6BB24F0F.gif)
+![image](./md/images/C30EF4D55F5E47F5616DFDCA6BB24F0F.gif)
 
 代码：
 
