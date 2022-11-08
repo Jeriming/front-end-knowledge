@@ -114,6 +114,20 @@ const routers = [
     ],
   },
   {
+    path: "/html",
+    name: "html",
+    label: "html",
+    component: DyncRender,
+    children: [
+      {
+        path: "/html-block-inline",
+        name: "html-block-inline",
+        label: "行内元素&块级元素",
+        component: DyncRender,
+      },
+    ],
+  },
+  {
     path: "/algorithm",
     name: "algorithm",
     label: "算法",
