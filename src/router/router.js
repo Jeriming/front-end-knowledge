@@ -125,6 +125,12 @@ const routers = [
         label: "行内元素&块级元素",
         component: DyncRender,
       },
+      {
+        path: "/html-empty-element",
+        name: "html-empty-element",
+        label: "空元素",
+        component: DyncRender,
+      },
     ],
   },
   {
