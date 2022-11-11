@@ -212,6 +212,12 @@ const routers = [
         component: DyncRender,
       },
       {
+        path: "/other-stack-heap",
+        name: "other-stack-heap",
+        label: "栈和堆的区别",
+        component: DyncRender,
+      },
+      {
         path: "/other-http-cache",
         name: "other-http-cache",
         label: "浏览器的缓存机制",
