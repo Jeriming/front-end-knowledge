@@ -4,4 +4,6 @@
 
 ### 1. [动态组件及动态参数](./#/vue-dynamicParam)
 
+### 2. [mixins](./#/vue-mixins)
+
 [返回](./#/)

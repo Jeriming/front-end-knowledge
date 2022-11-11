@@ -243,6 +243,12 @@ const routers = [
         label: "动态组件及动态参数",
         component: DyncRender,
       },
+      {
+        path: "/vue-mixins",
+        name: "vue-mixins",
+        label: "mixins",
+        component: DyncRender,
+      },
     ]
   },
   {
