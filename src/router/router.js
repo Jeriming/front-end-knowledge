@@ -249,6 +249,12 @@ const routers = [
         label: "mixins",
         component: DyncRender,
       },
+      {
+        path: "/vue-lifecycle",
+        name: "vue-lifecycle",
+        label: "父子组件生命周期执行顺序",
+        component: DyncRender,
+      },
     ]
   },
   {
