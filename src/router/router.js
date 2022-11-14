@@ -271,12 +271,12 @@ const routers = [
       },
     ]
   },
-  // {
-  //   path: "/test",
-  //   name: "test",
-  //   label: "测试",
-  //   component: ()=>import('../components/Test.vue'),
-  // },
+  {
+    path: "/test",
+    name: "test",
+    label: "测试",
+    component: ()=>import('../components/Test.vue'),
+  },
   {
     path: "/about",
     name: "about",

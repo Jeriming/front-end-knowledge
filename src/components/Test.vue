@@ -2,6 +2,8 @@
   <div id="content">
     <canvas
       id="canv"
+      width="500"
+      height="400"
       style="position: absolute; width: 500px; height: 400px; left: 0; top: 0"
     ></canvas>
     <p>
@@ -270,7 +272,10 @@ export default {
       const canvas = document.getElementById("canv");
       const ctx = canvas.getContext("2d");
       const img = new Image();
-      img.src = "./article.jpg";
+      // img.src = "./article.jpg";
+      // img.src = "./a1.jpg";
+      // img.src = "./a2.jpg";
+      img.src = "./a3.jpg";
       let originData;
       let textData;
       ctx.font = "15px Microsoft Yahei";
@@ -305,6 +310,12 @@ export default {
             } else {
               data[i] = 255;
             }
+          }
+          else if(i % 4 == 3) {
+            continue;
+          }
+          else {
+            data[i] = 0;
           }
         }
         ctx.putImageData(originData, 0, 0);
