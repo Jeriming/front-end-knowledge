@@ -275,7 +275,7 @@ const routers = [
     path: "/test",
     name: "test",
     label: "测试",
-    component: ()=>import('../components/Test.vue'),
+    component: ()=>import('../views/Test.vue'),
   },
   {
     path: "/about",
