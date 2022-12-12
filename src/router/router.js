@@ -197,6 +197,12 @@ const routers = [
         label: "调试 vue-cli",
         component: DyncRender,
       },
+      {
+        path: "/webpack-npm",
+        name: "webpack-npm",
+        label: "npm发布流程",
+        component: DyncRender,
+      },
     ]
   },
   {
