@@ -1,7 +1,8 @@
+const { defineConfig } = require('@vue/cli-service');
 const Routers = require("./build/GenRouter");
 const assetsDir = "front-end-knowledge";
-
-module.exports = {
+module.exports = defineConfig({
+  transpileDependencies: true,
   productionSourceMap: false,
   assetsDir: assetsDir,
   chainWebpack: (config) => {
@@ -44,11 +45,11 @@ module.exports = {
     // });
 
     config.plugin("copy").tap((args) => {
-      args[0].push({
+      args[0].patterns.push({
         from: "./src/md/",
         to: `./${assetsDir}/md/`,
       });
       return args;
     });
   },
-};
+})
